@@ -1,0 +1,13 @@
+#!/sbin/openrc-run
+
+command="/start.sh"
+command_background="true"
+pidfile="/run/netbootxyz.pid"
+
+export TFTPD_OPTS=
+export NGINX_PORT=80
+export WEB_APP_PORT=3000
+
+depend() {
+        need net
+}
